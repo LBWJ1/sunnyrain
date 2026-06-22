@@ -401,6 +401,12 @@ p:last-child { margin-bottom: 0; }
 .tarief-lijst li:last-child { border-bottom: none; }
 .tarief-proef { color: var(--grijs); font-size: var(--fs-sm); margin-bottom: 1.25rem; }
 
+.tarief-knoppen {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 /* ── SAMENWERKING ────────────────────────────────────── */
 .partner-kaart {
   background: var(--wit);
@@ -409,6 +415,12 @@ p:last-child { margin-bottom: 0; }
   padding: 2rem;
   box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
+}
+.partner-logo-link { display: inline-block; margin-bottom: 1.25rem; }
+.partner-logo {
+  max-width: 200px;
+  height: auto;
+  display: block;
 }
 .partner-info h3 { color: var(--turkoois); }
 .partner-oproep {
@@ -547,6 +559,7 @@ p:last-child { margin-bottom: 0; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; width: 100%; }
   .tarief-prijs { min-width: unset; width: 100%; }
+  .tarief-knoppen { flex-direction: column; }
   .functies-uitgebreid { font-size: var(--fs-xs); }
 }
 
