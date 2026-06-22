@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SunnyRain Studio — Irrigatieplanning software voor beregeningsinstallateurs</title>
+  <meta name="description" content="SunnyRain Studio is een tekentool voor beregeningsinstallateurs: teken op een luchtfoto, genereer automatisch de materiaallijst en offerte. Probeer 14 dagen gratis.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATIE
+  ══════════════════════════════════════════════════════ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link" aria-label="SunnyRain Studio — naar begin">
+        <!-- Logo volledig -->
+        <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg" class="logo-svg" aria-hidden="true">
+          <g transform="translate(10, 15)">
+            <path d="M44 6 C44 6 18 38 18 56 C18 72 29 83 44 83 C59 83 70 72 70 56 C70 38 44 6 44 6 Z" fill="#e0f2fe" stroke="#0891b2" stroke-width="2"/>
+            <circle cx="44" cy="54" r="13" fill="#f59e0b"/>
+            <g stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round">
+              <line x1="44" y1="36" x2="44" y2="31"/><line x1="44" y1="72" x2="44" y2="77"/>
+              <line x1="26" y1="54" x2="21" y2="54"/><line x1="62" y1="54" x2="67" y2="54"/>
+              <line x1="31" y1="41" x2="27" y2="37"/><line x1="57" y1="41" x2="61" y2="37"/>
+              <line x1="31" y1="67" x2="27" y2="71"/><line x1="57" y1="67" x2="61" y2="71"/>
+            </g>
+            <circle cx="30" cy="93" r="3" fill="#0891b2" opacity="0.4"/>
+            <circle cx="44" cy="98" r="4" fill="#0891b2" opacity="0.6"/>
+            <circle cx="58" cy="93" r="3" fill="#0891b2" opacity="0.4"/>
+          </g>
+          <text x="95" y="66" font-size="34" font-weight="700" fill="#1e3a8a" letter-spacing="-0.5" font-family="'Segoe UI', Arial, sans-serif">Sunny<tspan fill="#0891b2">Rain</tspan></text>
+          <text x="97" y="90" font-size="12" fill="#64748b" letter-spacing="5" font-family="'Segoe UI', Arial, sans-serif">STUDIO</text>
+          <line x1="95" y1="98" x2="340" y2="98" stroke="#0891b2" stroke-width="1" opacity="0.2"/>
+        </svg>
+      </a>
+      <nav class="main-nav" aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="#functies">Functies</a></li>
+          <li><a href="#tarief">Tarief</a></li>
+          <li><a href="#over">Over</a></li>
+          <li><a href="#contact" class="nav-cta">Gratis proberen</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul>
+        <li><a href="#functies">Functies</a></li>
+        <li><a href="#tarief">Tarief</a></li>
+        <li><a href="#over">Over</a></li>
+        <li><a href="#contact">Gratis proberen</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 1 — HERO
+    ══════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Voor beregeningsinstallateurs</p>
+          <h1>Beregeningsplannen tekenen, materiaallijsten en offertes — in één tool</h1>
+          <p class="hero-lead">Van luchtfoto tot offerte, zonder omwegen. Gebouwd voor en door beregeningsinstallateurs.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Vraag een gratis proefperiode aan</a>
+            <a href="#wat-doet-het" class="btn btn-ghost">Meer ontdekken</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="screenshot-placeholder" role="img" aria-label="Schermafbeelding van SunnyRain Studio — volgt binnenkort">
+            <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" class="placeholder-svg" aria-hidden="true">
+              <!-- Nep drone-achtergrond -->
+              <rect width="400" height="280" fill="#2d5a27" rx="8"/>
+              <rect x="40" y="30" width="140" height="100" fill="#3a7a32" rx="4" opacity="0.7"/>
+              <rect x="220" y="50" width="120" height="80" fill="#3a7a32" rx="4" opacity="0.6"/>
+              <rect x="60" y="160" width="200" height="80" fill="#4a8a40" rx="4" opacity="0.5"/>
+              <!-- Zone kleuren -->
+              <ellipse cx="110" cy="80" rx="55" ry="40" fill="#0891b2" opacity="0.25"/>
+              <ellipse cx="280" cy="90" rx="45" ry="30" fill="#f59e0b" opacity="0.25"/>
+              <!-- Leidingen -->
+              <polyline points="80,80 160,80 160,160 240,160" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-dasharray="6,3"/>
+              <polyline points="160,80 280,80 280,90" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,3"/>
+              <!-- Sproeiers -->
+              <circle cx="80" cy="80" r="5" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+              <circle cx="140" cy="55" r="5" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+              <circle cx="160" cy="110" r="5" fill="#ffffff" stroke="#0891b2" stroke-width="1.5"/>
+              <circle cx="260" cy="75" r="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+              <circle cx="300" cy="100" r="5" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5"/>
+              <!-- Dekkingsbogen -->
+              <path d="M80,80 L80,50 A30,30 0 0,1 107,67 Z" fill="#0891b2" opacity="0.18"/>
+              <path d="M260,75 L260,50 A28,28 0 0,1 284,68 Z" fill="#f59e0b" opacity="0.18"/>
+              <!-- UI overlay balk onderaan -->
+              <rect x="0" y="248" width="400" height="32" fill="rgba(30,58,138,0.92)" rx="0"/>
+              <text x="12" y="267" font-size="9" fill="#e0f2fe" font-family="Arial, sans-serif">Zone A  |  Q: 1.8 m³/h  |  Druk: 2.4 bar  ✓</text>
+              <text x="260" y="267" font-size="9" fill="#f59e0b" font-family="Arial, sans-serif">Zone B  |  Q: 1.2 m³/h</text>
+            </svg>
+            <p class="placeholder-label">Screenshot volgt</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 2 — WAT DE APP DOET
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-white" id="wat-doet-het">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Wat SunnyRain Studio doet</h2>
+        </div>
+        <div class="uitleg-grid">
+          <article class="uitleg-item">
+            <div class="uitleg-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="32" height="32" rx="4" fill="#e0f2fe"/><path d="M10 28 L10 18 L16 12 L22 18 L28 10 L30 28 Z" fill="#0891b2" opacity="0.7"/><circle cx="28" cy="14" r="4" fill="#f59e0b"/></svg>
+            </div>
+            <h3>Tekenen op een luchtfoto</h3>
+            <p>SunnyRain Studio is een tekentool waarmee je rechtstreeks op een luchtfoto van de tuin een volledig beregeningsplan opbouwt: sproeiers plaatsen, leidingen en kabels tekenen, zones indelen, druppelirrigatie toevoegen. Alles gebeurt op schaal, in de browser, zonder installatie. Zodra het plan klaar staat, genereert de app automatisch de materiaallijst die erbij hoort — geen handmatig optellen van leidinglengtes of sproeikoppen meer. Vanuit hetzelfde plan stel je ook de offerte voor de klant op.</p>
+          </article>
+          <article class="uitleg-item">
+            <div class="uitleg-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="32" height="32" rx="4" fill="#e0f2fe"/><circle cx="20" cy="20" r="8" fill="none" stroke="#0891b2" stroke-width="2"/><path d="M20 12 Q28 16 28 24" stroke="#f59e0b" stroke-width="2" fill="none"/><circle cx="20" cy="20" r="2.5" fill="#1e3a8a"/></svg>
+            </div>
+            <h3>Waarom deze tool bestaat</h3>
+            <p>SunnyRain Studio is niet bedacht achter een bureau en dan aan de markt aangeboden. De tool is ontstaan vanuit een heel concrete, dagelijkse frustratie in het werk van een installateur: plannen die op papier of in algemene tekenprogramma's werden gemaakt, materiaallijsten die apart en handmatig moesten worden opgesteld, en offertes die daar dan nog los bovenop kwamen. Dat kostte tijd, en die tijd ging niet naar het werk zelf. SunnyRain Studio brengt die drie stappen — tekenen, materiaal bepalen, offreren — samen in één tool, zodat een plan dat je 's avonds tekent de volgende ochtend al klaar is om mee naar de klant te gaan.</p>
+          </article>
+          <article class="uitleg-item">
+            <div class="uitleg-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="32" height="32" rx="4" fill="#e0f2fe"/><rect x="10" y="22" width="5" height="10" fill="#0891b2" opacity="0.6"/><rect x="18" y="16" width="5" height="16" fill="#0891b2" opacity="0.8"/><rect x="26" y="10" width="5" height="22" fill="#0891b2"/><polyline points="10,20 18,14 26,8" stroke="#f59e0b" stroke-width="2" fill="none"/></svg>
+            </div>
+            <h3>Hoe het werkt</h3>
+            <p>Je begint met een luchtfoto van de tuin (een drone-opname of een bestaande plattegrond) en stelt de schaal in. Daarna teken je sproeiers, leidingen, kabels en zones direct op die foto — elk element op de juiste plaats, met de juiste afmetingen. Per zone zie je meteen de dekking van de sproeiers, het debiet en de oppervlakte. Eenmaal het plan staat, haalt de app er automatisch de materiaallijst uit: elk onderdeel, elke leidinglengte, elke sproeikop, gekoppeld aan de catalogus die je gebruikt. Vanuit diezelfde gegevens stel je de offerte op — geen aparte rekenoefening, geen kans dat plan en offerte uit elkaar gaan lopen.</p>
+          </article>
+          <article class="uitleg-item">
+            <div class="uitleg-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="32" height="32" rx="4" fill="#e0f2fe"/><path d="M12 20 L17 25 L28 14" stroke="#0891b2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Waarom deze tool het overwegen waard is</h3>
+            <p>Er bestaan andere programma's die een stuk van dit werk doen. Sommige zijn brede platformen die tientallen vakgebieden tegelijk proberen te bedienen, waarbij beregening maar één tegeltje is in een veel groter mozaïek — generiek, niet gemaakt met jouw specifieke materie in het achterhoofd. Andere zijn vooral bedoeld om mooie beelden te tonen aan een klant, maar laten je achter zonder een werkdocument waarmee je echt kan bestellen en installeren. En de gratis tools die fabrikanten zelf aanbieden, werken vanzelfsprekend alleen met hun eigen producten, en missen vaak nog dingen die in de praktijk net onmisbaar zijn, zoals een volledig leidingtracé.</p>
+            <p>SunnyRain Studio koos een andere weg: gebouwd vanuit en voor de beregeningspraktijk zelf, werkend met de merken die je al gebruikt, van eerste lijn op de foto tot de offerte die bij de klant op tafel komt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 3 — FUNCTIES
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-light" id="functies">
+      <div class="container">
+        <h2>Wat zit er in</h2>
+
+        <table class="functies-kort" aria-label="Overzicht kernfuncties">
+          <thead><tr><th>Functie</th><th aria-label="Beschikbaar"></th></tr></thead>
+          <tbody>
+            <tr><td>Tekenen op luchtfoto/drone-opname</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Sproeiers, leidingen, kabels, zones</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Druppelirrigatie, automatisch te genereren per zone</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Materiaallijst automatisch</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Offerte automatisch (intern/klant/doe-het-zelf)</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Conceptplan (geblurd) vs. finaal plan</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Werkt met meerdere merken (Rainbird + Hunter)</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Projectbeheer + taken</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+            <tr><td>Werkt offline</td><td class="vinkje" aria-label="Ja">✓</td></tr>
+          </tbody>
+        </table>
+
+        <div class="uitgebreid-toggle">
+          <button class="btn btn-outline" id="toggle-uitgebreid" aria-expanded="false" aria-controls="tabel-uitgebreid">
+            Bekijk alle functies
+          </button>
+        </div>
+
+        <div id="tabel-uitgebreid" class="functies-uitgebreid" hidden>
+          <table aria-label="Uitgebreide functielijst">
+            <thead><tr><th>Categorie</th><th>Functie</th></tr></thead>
+            <tbody>
+              <tr class="cat-header"><td colspan="2">Tekenen</td></tr>
+              <tr><td></td><td>Tekenen op luchtfoto, drone-opname of geüploade plattegrond, met de schaal correct ingesteld zodat alle berekeningen kloppen</td></tr>
+              <tr><td></td><td>Sproeiers plaatsen (Popup, Rotor, Micro), met instelbare straal en hoek (arc)</td></tr>
+              <tr><td></td><td>Leidingen tekenen, met diameter, kleur en lijndikte</td></tr>
+              <tr><td></td><td>Beregeningskabels tekenen</td></tr>
+              <tr><td></td><td>Zones intekenen: gazon, beplanting, irrigatiemat (imat), obstakel</td></tr>
+              <tr><td></td><td>Druppelirrigatie met instelbare druppelafstand</td></tr>
+              <tr><td></td><td>Tekstlabels toevoegen aan het plan</td></tr>
+              <tr><td></td><td>Meerdere achtergronden (subplannen) binnen één project, met gedeelde materiaallijst</td></tr>
+              <tr class="cat-header"><td colspan="2">Automatisch genereren</td></tr>
+              <tr><td></td><td>Druppeldarm automatisch laten genereren per zone, met instelbare rijafstand, randoffset, bloklengte en druppelaarafstand — volledig automatisch of stap voor stap per zone</td></tr>
+              <tr class="cat-header"><td colspan="2">Analyse</td></tr>
+              <tr><td></td><td>Debiet- en drukcontrole per zone: de app berekent het totale debiet en de minimale werkdruk per zone, en toetst dat automatisch aan je pompcapaciteit en beschikbare druk, met een duidelijke melding of een zone binnen de marge blijft</td></tr>
+              <tr class="cat-header"><td colspan="2">Installatie-onderdelen</td></tr>
+              <tr><td></td><td>Diepteboring, oppervlakteboring, bronpomp, bronkraan, valvebox, controller, wifi-module, ontijzering, bodemvochtigheidssensor, regenmelder, filter, drukregelaar, veiligheidsmodule — elk koppelbaar aan een catalogusartikel</td></tr>
+              <tr class="cat-header"><td colspan="2">Materiaal &amp; catalogus</td></tr>
+              <tr><td></td><td>Uitgebreide catalogus met duizenden artikelen</td></tr>
+              <tr><td></td><td>Automatische materiaallijst: elk onderdeel, elke leidinglengte, elke sproeikop</td></tr>
+              <tr><td></td><td>Materiaallijst apart exporteren als PDF of CSV</td></tr>
+              <tr><td></td><td>Werkt met meerdere merken naast elkaar (Rainbird en Hunter)</td></tr>
+              <tr class="cat-header"><td colspan="2">Offerte</td></tr>
+              <tr><td></td><td>Offerte automatisch opgesteld vanuit het plan, en volledig aanpasbaar — inclusief je eigen prijzen en marge</td></tr>
+              <tr><td></td><td>Drie offerteversies vanuit hetzelfde plan: intern, klant, doe-het-zelf</td></tr>
+              <tr><td></td><td>Materiaallijst als aparte bijlage bij de offerte, zonder prijzen</td></tr>
+              <tr class="cat-header"><td colspan="2">Plan delen met de klant</td></tr>
+              <tr><td></td><td>Conceptplan: een geblurde versie van het plan, geschikt om aan de klant te tonen tijdens het offertetraject zonder alle details al prijs te geven</td></tr>
+              <tr><td></td><td>Finaal plan: het volledige, scherpe plan zonder blur</td></tr>
+              <tr class="cat-header"><td colspan="2">Projectbeheer &amp; klanten</td></tr>
+              <tr><td></td><td>Meerdere projecten beheren, elk met eigen klantgegevens, materialen en planning</td></tr>
+              <tr><td></td><td>Apart klantenbestand: alle klanten in één overzicht, ook zonder lopend project</td></tr>
+              <tr><td></td><td>Status per project bijhouden: in de maak, offerte verstuurd, geweigerd, akkoord, in te plannen, uitgevoerd — projecten worden automatisch per status gegroepeerd in het overzicht</td></tr>
+              <tr><td></td><td>Onderhoudscontracten bijhouden (zomer- en winteronderhoud) en met één klik de lijst uitdraaien van wie er dat seizoen ingepland moet worden</td></tr>
+              <tr><td></td><td>Automatische herinnering wanneer een project langer dan 14 dagen niet meer van status is veranderd — zodat niets onbedoeld blijft "hangen"</td></tr>
+              <tr class="cat-header"><td colspan="2">Export &amp; delen</td></tr>
+              <tr><td></td><td>Plan exporteren als PNG, SVG of JSON</td></tr>
+              <tr><td></td><td>Opslaan als projectbestand</td></tr>
+              <tr class="cat-header"><td colspan="2">Taken &amp; opvolging</td></tr>
+              <tr><td></td><td>Ingebouwd takensysteem per project en algemeen, met prioriteiten en herinneringen</td></tr>
+              <tr class="cat-header"><td colspan="2">Werken zonder internet</td></tr>
+              <tr><td></td><td>Werkt als PWA — te installeren, ook bruikbaar zonder internetverbinding</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 4 — WAT KAN JE VERWACHTEN
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-white" id="verwachten">
+      <div class="container">
+        <h2>Wat kan je verwachten</h2>
+        <div class="twee-kolom">
+          <article class="kolom-artikel">
+            <h3>Het traject</h3>
+            <p>Je vult het formulier op deze site in. Ik neem persoonlijk contact met je op om je situatie kort te bespreken en de juiste licentiesleutel klaar te zetten. Daarna kan je meteen aan de slag: geen installatie nodig, gewoon inloggen in de browser en je eerste plan tekenen. Heb je onderweg vragen, dan krijg je rechtstreeks contact met mij — geen anonieme helpdesk, geen ticketsysteem.</p>
+          </article>
+          <article class="kolom-artikel">
+            <h3>Eenmaal je ermee werkt</h3>
+            <p>Alles wat je voorheen los van elkaar deed — een plan tekenen, materialen optellen, een offerte opstellen, bijhouden wie je nog moet inplannen — gebeurt nu op één plek, in één tool. Geen drie verschillende programma's of een los Excel-bestand meer naast elkaar.</p>
+            <p>De interface is gebouwd om vanzelf te spreken: de meeste knoppen doen wat je verwacht, en voor wat niet meteen duidelijk is, staat er een uitgebreide handleiding met alle functies toegelicht. Je hoeft niet alles in één keer te leren.</p>
+            <p>Je werkt in je eigen tempo. Een kwartiertje tussendoor is genoeg om een plan een stap verder te brengen: zet jezelf een herinnering in de takenlijst, en de volgende dag pak je gewoon terug op waar je gebleven was. Je projecten houden hun status bij — in de maak, offerte verstuurd, akkoord, in te plannen — en worden automatisch per status gegroepeerd, zodat je in één oogopslag ziet wat waar staat, zonder dat je dat zelf moet onthouden of ergens anders moet bijhouden. Een project dat te lang blijft "hangen" zonder dat de status verandert, krijgt vanzelf een seintje — geen offerte die je vergeet op te volgen omdat hij ergens onderaan een lijst wegzakt. Klanten met een onderhoudscontract hoef je niet handmatig te traceren: in het voorjaar of najaar draai je met één klik de lijst uit van wie er dat seizoen aan de beurt is.</p>
+            <p>Het resultaat is niet alleen tijdwinst. De administratie rond een project — die vroeger een vervelend klusje was waar je tegenop kon zien — wordt onderdeel van hetzelfde werk als het tekenen zelf. Minder schakelen tussen programma's, minder dingen die je kan vergeten, en een tool die meegroeit met hoe je al werkt. Het werk gaat niet alleen sneller, het wordt er ook leuker van.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 5 — PROEFPERIODE
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-light section-centered" id="proefperiode">
+      <div class="container container-narrow">
+        <h2>Probeer het zelf</h2>
+        <p class="lead">Je probeert SunnyRain Studio 14 dagen volledig uit, met toegang tot alle functies van een standaardlicentie — geen beperkte demo, gewoon de echte tool. Na die 14 dagen schakelt de proefsleutel over naar alleen-lezen: je kan je werk nog inkijken, maar niet verder bewerken.</p>
+        <p>Wil je doorgaan, dan hoef je daar zelf niets voor te regelen. Ik volg dit op tegen het einde van je proefperiode en zorg voor een nieuwe sleutel zodra je overstapt naar een jaarlicentie.</p>
+        <a href="#contact" class="btn btn-primary btn-large">Vraag een gratis proefperiode aan</a>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 6 — TARIEF
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-white" id="tarief">
+      <div class="container">
+        <h2>Tarief</h2>
+        <div class="tarief-kaart">
+          <div class="tarief-prijs">
+            <span class="prijs-bedrag">€350</span>
+            <span class="prijs-periode">per jaar</span>
+            <span class="prijs-maand">± €29 per maand</span>
+          </div>
+          <div class="tarief-inhoud">
+            <p class="tarief-intro">Eén licentie, jaarlijks gefactureerd — geen verborgen kosten, geen aparte modules die je apart moet bijkopen.</p>
+            <ul class="tarief-lijst">
+              <li>Alle functies van de tool, voluit te gebruiken</li>
+              <li>Elke update en nieuwe functie, automatisch — geen aparte upgrade-kosten</li>
+              <li>Persoonlijk contact bij vragen, rechtstreeks met mij</li>
+            </ul>
+            <p class="tarief-proef">Wil je eerst zien of de tool bij je past? Vraag een gratis proefperiode van 14 dagen aan, met volledige toegang tot alle functies. Pas als je overstapt naar een jaarlicentie, betaal je.</p>
+            <a href="#contact" class="btn btn-primary">Vraag een gratis proefperiode aan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 7 — INSTALLATIE
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-light" id="installatie">
+      <div class="container container-narrow">
+        <h2>Installatie &amp; aan de slag</h2>
+        <p>SunnyRain Studio is een webapplicatie — je hoeft niets te downloaden of te installeren via een app store. Toch werkt het als een echte app: je slaat het eenmalig op als app op je computer of tablet, en daarna open je het gewoon zoals elke andere app op je toestel. Geen browser openen, geen link zoeken.</p>
+        <p>Hoe dat precies werkt op jouw toestel, staat stap voor stap beschreven in de handleiding die je bij je licentiesleutel ontvangt.</p>
+        <p>Eenmaal de app opgeslagen staat: open hem, voer je licentiesleutel in, en je kan beginnen. De sleutel sla je eenmalig op — daarna hoef je hem niet opnieuw in te voeren.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 8 — OVER SUNNYRAIN STUDIO
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-white" id="over">
+      <div class="container container-narrow">
+        <h2>Over SunnyRain Studio</h2>
+        <p>SunnyRain Studio is ontstaan vanuit een concrete vraag uit de praktijk. Een beregeningsinstallateur met jarenlange ervaring zocht een tool die het werk van een installateur echt begrijpt: niet een generiek tekenprogramma dat je kan ombuigen voor beregening, maar iets dat gebouwd is met de dagelijkse realiteit van een installateur in het achterhoofd.</p>
+        <p>Die tool bestond niet. Dus zijn we hem samen gaan bouwen.</p>
+        <p>Hij bracht de vakkennis: hoe een beregeningsplan in de praktijk werkt, wat een installateur nodig heeft om snel en correct te kunnen werken, waar bestaande programma's tekortschieten. Ik bracht de techniek. Het resultaat is een tool die niet theoretisch is uitgedacht, maar gevormd door echte projecten, echte vragen en echte feedback uit het veld.</p>
+        <p>SunnyRain Studio is geen groot softwarebedrijf. Het is een klein, persoonlijk project — en dat is bewust. Kleine schaal betekent korte lijnen: als je een vraag hebt, krijg je antwoord van de persoon die de tool gebouwd heeft.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 9 — SAMENWERKING
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-light" id="samenwerking">
+      <div class="container">
+        <h2>Samenwerking</h2>
+        <div class="partner-kaart">
+          <div class="partner-info">
+            <h3>BuitenGewoon Water — beregeningsspecialist en eerste partner</h3>
+            <p>SunnyRain Studio is mee gevormd door Jef Geukens van BuitenGewoon Water — beregeningsinstallateur en de eerste die de tool in de praktijk gebruikte en mee uitbouwde. Zijn vakkennis zit in elk onderdeel van de tool verwerkt: van de manier waarop zones worden ingedeeld tot de details van de materiaallijst en offerte.</p>
+            <p>Jef gebruikt SunnyRain Studio als vaste partner — en biedt vanuit die samenwerking iets unieks aan zijn klanten: een volledig begeleid doe-het-zelf-traject voor tuinberegening. Hij tekent het plan op maat, stelt de materiaallijst samen, levert de materialen en voorziet je van een stap-voor-stap installatiegids. Zo geniet je van professionele kwaliteit, ook als je het zelf doet.</p>
+            <p>Meer info op <a href="https://www.buitengewoonwater.be" target="_blank" rel="noopener noreferrer">www.buitengewoonwater.be</a></p>
+          </div>
+        </div>
+        <p class="partner-oproep">Ben je zelf beregeningsinstallateur en ben je benieuwd of een samenwerking iets voor jou is? Neem gerust contact op via <a href="mailto:info@sunnyrain.be">info@sunnyrain.be</a>.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTIE 10 — CONTACT
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-white" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="formulieren-grid">
+
+          <!-- Formulier 1: Proefperiode aanvragen -->
+          <div class="formulier-blok">
+            <h3>Probeer SunnyRain Studio 14 dagen gratis</h3>
+            <p>Vul het formulier in en ik bezorg je een licentiesleutel voor een volledige proefperiode van 14 dagen — geen betalingsgegevens nodig, geen automatische verlenging.</p>
+            <form id="form-proef" novalidate>
+              <div class="form-groep">
+                <label for="proef-naam">Naam <span class="verplicht" aria-hidden="true">*</span></label>
+                <input type="text" id="proef-naam" name="naam" required autocomplete="name" placeholder="Jouw naam">
+              </div>
+              <div class="form-groep">
+                <label for="proef-bedrijf">Bedrijfsnaam <span class="verplicht" aria-hidden="true">*</span></label>
+                <input type="text" id="proef-bedrijf" name="bedrijf" required autocomplete="organization" placeholder="Naam van je bedrijf">
+              </div>
+              <div class="form-groep">
+                <label for="proef-email">E-mailadres <span class="verplicht" aria-hidden="true">*</span></label>
+                <input type="email" id="proef-email" name="email" required autocomplete="email" placeholder="jouw@email.be">
+              </div>
+              <div class="form-groep">
+                <label for="proef-situatie">Korte omschrijving van je situatie <span class="optioneel">(optioneel)</span></label>
+                <textarea id="proef-situatie" name="situatie" rows="4" placeholder="Type projecten, aantal per jaar, ..."></textarea>
+              </div>
+              <div class="form-groep form-groep-check">
+                <input type="checkbox" id="proef-akkoord" name="akkoord" required>
+                <label for="proef-akkoord">Ik ga akkoord met de verwerking van mijn gegevens conform de <a href="/privacy" target="_blank">privacyverklaring</a>. <span class="verplicht" aria-hidden="true">*</span></label>
+              </div>
+              <div class="form-feedback" id="proef-feedback" role="alert" aria-live="polite" hidden></div>
+              <button type="submit" class="btn btn-primary">Vraag een gratis proefperiode aan</button>
+            </form>
+          </div>
+
+          <!-- Formulier 2: Vraag stellen -->
+          <div class="formulier-blok">
+            <h3>Heb je een vraag?</h3>
+            <p>Twijfel je of de tool bij je past, of wil je iets concreets weten voor je de stap zet? Stel je vraag gerust — ik antwoord persoonlijk.</p>
+            <form id="form-vraag" novalidate>
+              <div class="form-groep">
+                <label for="vraag-naam">Naam <span class="verplicht" aria-hidden="true">*</span></label>
+                <input type="text" id="vraag-naam" name="naam" required autocomplete="name" placeholder="Jouw naam">
+              </div>
+              <div class="form-groep">
+                <label for="vraag-email">E-mailadres <span class="verplicht" aria-hidden="true">*</span></label>
+                <input type="email" id="vraag-email" name="email" required autocomplete="email" placeholder="jouw@email.be">
+              </div>
+              <div class="form-groep">
+                <label for="vraag-tekst">Vraag <span class="verplicht" aria-hidden="true">*</span></label>
+                <textarea id="vraag-tekst" name="vraag" rows="6" required placeholder="Stel je vraag hier..."></textarea>
+              </div>
+              <div class="form-groep form-groep-check">
+                <input type="checkbox" id="vraag-akkoord" name="akkoord" required>
+                <label for="vraag-akkoord">Ik ga akkoord met de verwerking van mijn gegevens conform de <a href="/privacy" target="_blank">privacyverklaring</a>. <span class="verplicht" aria-hidden="true">*</span></label>
+              </div>
+              <div class="form-feedback" id="vraag-feedback" role="alert" aria-live="polite" hidden></div>
+              <button type="submit" class="btn btn-primary">Verstuur je vraag</button>
+            </form>
+          </div>
+
+        </div>
+        <p class="contact-direct">Of mail rechtstreeks naar <a href="mailto:info@sunnyrain.be"><strong>info@sunnyrain.be</strong></a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <!-- Logo compact -->
+        <svg viewBox="0 0 280 65" xmlns="http://www.w3.org/2000/svg" class="footer-logo-svg" aria-label="SunnyRain Studio">
+          <g transform="translate(0, 10)">
+            <path d="M18 2 C18 2 6 17 6 25 C6 32 11 37 18 37 C25 37 30 32 30 25 C30 17 18 2 18 2 Z" fill="#e0f2fe" stroke="#0891b2" stroke-width="1.5"/>
+            <circle cx="18" cy="24" r="6" fill="#f59e0b"/>
+            <g stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round">
+              <line x1="18" y1="14" x2="18" y2="11"/><line x1="18" y1="34" x2="18" y2="37"/>
+              <line x1="8" y1="24" x2="5" y2="24"/><line x1="28" y1="24" x2="31" y2="24"/>
+              <line x1="11" y1="17" x2="9" y2="15"/><line x1="25" y1="17" x2="27" y2="15"/>
+              <line x1="11" y1="31" x2="9" y2="33"/><line x1="25" y1="31" x2="27" y2="33"/>
+            </g>
+            <circle cx="12" cy="43" r="2" fill="#0891b2" opacity="0.4"/>
+            <circle cx="18" cy="46" r="2.5" fill="#0891b2" opacity="0.6"/>
+            <circle cx="24" cy="43" r="2" fill="#0891b2" opacity="0.4"/>
+          </g>
+          <text x="38" y="23" font-size="9" fill="#94a3b8" letter-spacing="1" font-family="'Segoe UI', Arial, sans-serif">powered by</text>
+          <text x="38" y="42" font-size="18" font-weight="700" fill="#1e3a8a" font-family="'Segoe UI', Arial, sans-serif">Sunny<tspan fill="#0891b2">Rain</tspan> <tspan font-size="12" font-weight="400" fill="#64748b" letter-spacing="2">STUDIO</tspan></text>
+        </svg>
+      </div>
+      <div class="footer-info">
+        <p class="footer-placeholder">
+          <strong>[NAAM ONDERNEMING — volgt na juridische structuur-beslissing]</strong><br>
+          [ADRES — volgt na juridische structuur-beslissing]<br>
+          Ondernemingsnummer: [volgt na juridische structuur-beslissing]
+        </p>
+        <p><a href="mailto:info@sunnyrain.be">info@sunnyrain.be</a></p>
+        <p><a href="/privacy">Privacyverklaring</a></p>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; <span id="footer-jaar"></span> SunnyRain Studio</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
